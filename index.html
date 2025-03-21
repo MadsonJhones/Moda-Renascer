@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda Renascer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MODA RENASCER</div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Coleções</a></li>
+                <li><a href="#">Promoções</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <span>🔍</span>
+            <span>❤️</span>
+            <span>👤</span>
+            <span>🛒</span>
+        </div>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <h2>CATEGORIAS</h2>
+            <ul>
+                <li><input type="checkbox" checked> Todos os Produtos</li>
+                <li><input type="checkbox"> Vestidos</li>
+                <li><input type="checkbox"> Blusas</li>
+                <li><input type="checkbox"> Saias</li>
+                <li><input type="checkbox"> Calças</li>
+                <li><input type="checkbox"> Jaquetas</li>
+                <li><input type="checkbox"> Conjuntos</li>
+            </ul>
+            <h3>Novidades</h3>
+            <h3>Promoções</h3>
+            <h3>Em destaque</h3>
+            <div class="price-filter">
+                <h3>Preço</h3>
+                <div class="range">
+                    <span>R$0</span>
+                    <input type="range" min="0" max="300" value="300">
+                    <span>R$300</span>
+                </div>
+                <button class="apply-filter">Aplicar Filtros</button>
+                <button class="clear-filter">Limpar Filtros</button>
+            </div>
+        </aside>
+
+        <section class="main-content">
+            <div class="banner">
+                <div class="banner-text">
+                    <h1>Elegância para Todos os Momentos</h1>
+                    <p>Descubra nossa nova coleção de roupas que combinam estilo, conforto e qualidade. Peças exclusivas que valorizam sua beleza natural.</p>
+                    <button class="banner-button">Ver Novidades</button>
+                </div>
+            </div>
+
+            <div class="featured-products">
+                <h2>EM DESTAQUE</h2>
+                <p>Nossas peças mais populares, selecionadas especialmente para você.</p>
+                <div class="product-grid">
+                    <div class="product-card" onclick="showProductDetails('Vestido Floral', 'R$159,90', 'Um lindo vestido com estampa floral, perfeito para os dias de primavera. O tecido leve proporciona conforto e elegância.', 'Rosa Claro', 'P', 'https://via.placeholder.com/300x400?text=Vestido+Floral')">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x400?text=Vestido+Floral" alt="Vestido Floral">
+                        </div>
+                        <h3>Vestido Floral</h3>
+                        <p>R$159,90</p>
+                    </div>
+                    <div class="product-card" onclick="showProductDetails('Blusa Elegante', 'R$89,90', 'Blusa delicada com detalhes em renda, ideal para compor looks elegantes.', 'Branco', 'P', 'https://via.placeholder.com/300x400?text=Blusa+Elegante')">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x400?text=Blusa+Elegante" alt="Blusa Elegante">
+                        </div>
+                        <h3>Blusa Elegante</h3>
+                        <p>R$89,90</p>
+                    </div>
+                    <div class="product-card" onclick="showProductDetails('Saia Midi', 'R$129,90', 'Saia midi com detalhes plissados, perfeita para um visual sofisticado.', 'Azul Claro', 'M', 'https://via.placeholder.com/300x400?text=Saia+Midi')">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x400?text=Saia+Midi" alt="Saia Midi">
+                        </div>
+                        <h3>Saia Midi</h3>
+                        <p>R$129,90</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para detalhes do produto -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProductDetails()">×</span>
+            <img id="modalImage" src="" alt="Produto" class="modal-image">
+            <h2 id="modalTitle"></h2>
+            <p id="modalPrice"></p>
+            <p id="modalDescription"></p>
+            <p><strong>Cor:</strong> <span id="modalColor"></span></p>
+            <p><strong>Tamanho:</strong> <span id="modalSize"></span></p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
