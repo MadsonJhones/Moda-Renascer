@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moda Renascer</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
 </head>
 <body>
     <header>
@@ -67,21 +67,21 @@
                 <div class="product-grid">
                     <div class="product-card" onclick="showProductDetails('Vestido Floral', 'R$159,90', 'Um lindo vestido com estampa floral, perfeito para os dias de primavera. O tecido leve proporciona conforto e elegância.', 'Rosa Claro', 'P', 'https://via.placeholder.com/300x400?text=Vestido+Floral')">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/300x400?text=Vestido+Floral" alt="Vestido Floral">
+                            <img src="src/images/photo-01.jpeg" alt="Vestido Floral">
                         </div>
                         <h3>Vestido Floral</h3>
                         <p>R$159,90</p>
                     </div>
                     <div class="product-card" onclick="showProductDetails('Blusa Elegante', 'R$89,90', 'Blusa delicada com detalhes em renda, ideal para compor looks elegantes.', 'Branco', 'P', 'https://via.placeholder.com/300x400?text=Blusa+Elegante')">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/300x400?text=Blusa+Elegante" alt="Blusa Elegante">
+                            <img src="src/images/photo-02.jpeg" alt="Blusa Elegante">
                         </div>
                         <h3>Blusa Elegante</h3>
                         <p>R$89,90</p>
                     </div>
                     <div class="product-card" onclick="showProductDetails('Saia Midi', 'R$129,90', 'Saia midi com detalhes plissados, perfeita para um visual sofisticado.', 'Azul Claro', 'M', 'https://via.placeholder.com/300x400?text=Saia+Midi')">
                         <div class="product-image">
-                            <img src="https://via.placeholder.com/300x400?text=Saia+Midi" alt="Saia Midi">
+                            <img src="src/images/photo-03.jpeg" alt="Saia Midi">
                         </div>
                         <h3>Saia Midi</h3>
                         <p>R$129,90</p>
@@ -95,7 +95,7 @@
     <div id="productModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeProductDetails()">×</span>
-            <img id="modalImage" src="" alt="Produto" class="modal-image">
+            <img id="modalImage" src="src/images/photo-01.jpeg" alt="Produto" class="modal-image">
             <h2 id="modalTitle"></h2>
             <p id="modalPrice"></p>
             <p id="modalDescription"></p>
@@ -105,6 +105,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="src/scripts/script.js"></script>
 </body>
 </html>
